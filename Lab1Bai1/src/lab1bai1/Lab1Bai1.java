@@ -7,10 +7,7 @@ package lab1bai1;
 
 import java.util.*;
 
-/**
- *
- * @author trong
- */
+
 public class Lab1Bai1 {
 
     /**
@@ -18,10 +15,9 @@ public class Lab1Bai1 {
      */
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        String Hoten = null;
         double Diem;
         System.out.print("Nhập Họ Tên: ");
-        Hoten = scanner.nextLine();
+        String Hoten = scanner.nextLine();
         System.out.print("Nhập Điểm: ");
         Diem = scanner.nextDouble();
         System.out.printf("%s %.2f điểm\n", Hoten, Diem);
