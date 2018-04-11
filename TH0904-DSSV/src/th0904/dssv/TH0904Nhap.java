@@ -4,15 +4,19 @@
  * and open the template in the editor.
  */
 package th0904.dssv;
+
 import java.util.*;
 import th0904.dssv.SinhVien;
+
 /**
  *
  * @author trong
  */
 public class TH0904Nhap extends javax.swing.JFrame {
+
     private int stt = 1;
     private ArrayList<SinhVien> sv = new ArrayList<SinhVien>();
+
     public TH0904Nhap() {
         initComponents();
     }
@@ -186,10 +190,10 @@ public class TH0904Nhap extends javax.swing.JFrame {
         String hoTen = txtHoTen.getText();
         int namSinh = Integer.parseInt(txtNamSinh.getText());
         String gioiTinh = null;
-        if(rdNam.isSelected()){
+        if (rdNam.isSelected()) {
             gioiTinh = "Nam";
         }
-        if(rdNu.isSelected()){
+        if (rdNu.isSelected()) {
             gioiTinh = "Nữ";
         }
         SinhVien tam = new SinhVien();
@@ -202,11 +206,13 @@ public class TH0904Nhap extends javax.swing.JFrame {
     }//GEN-LAST:event_btThemActionPerformed
 
     private void btNapActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btNapActionPerformed
-        String outPut = "STT \t Họ Tên\t Năm Sinh\t Giới tính\n";
-        for(int i = 1; i <= sv.size(); i++){
-            String.join(outPut, "");
+        
+        for (Object x : sv) {
+            String s = "";
+            s = ((SinhVien) x).getHoTen() + "\t\t" + ((SinhVien) x).getNamSinh() + "\t\t" + ((SinhVien) x).getGioiTinh() + "\n";
+            txtArea.insert(s, 0);
         }
-        txtArea.setText(outPut);
+        txtArea.insert("Họ tên\t\t Năm sinh\t\t Giới tính\n", 0);
     }//GEN-LAST:event_btNapActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -5,6 +5,9 @@
  */
 package demojlistjcombo1104;
 
+import java.awt.*;
+import javax.swing.*;
+
 /**
  *
  * @author trong
@@ -33,6 +36,7 @@ public class DemoJlist extends javax.swing.JFrame {
         lbChon = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(255, 255, 255));
 
         listMauNen.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         listMauNen.setModel(new javax.swing.AbstractListModel<String>() {
@@ -76,16 +80,35 @@ public class DemoJlist extends javax.swing.JFrame {
                 .addComponent(lbChon, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btXacNhan, javax.swing.GroupLayout.DEFAULT_SIZE, 87, Short.MAX_VALUE)
+                    .addComponent(btXacNhan, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                .addGap(160, 160, 160))
+                .addContainerGap(147, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btXacNhanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btXacNhanActionPerformed
+        //Tìm item mà user chọn
         int stt = listMauNen.getSelectedIndex();
+        //lấy data của Jlist
+        ListModel model = listMauNen.getModel();
+        String selectedColor = model.getElementAt(stt).toString();
+        
+        //Thêm vào list
+
+        
+        //JOptionPane.showMessageDialog(null, "Bạn đã chọn màu " + selectedColor, "Thông báo!", JOptionPane.INFORMATION_MESSAGE);
+        //Đặt màu nền
+        Container vungNoiDung = this.getContentPane();
+        if(selectedColor.equals("Xanh Lá"))
+            vungNoiDung.setBackground(Color.GREEN);
+        if(selectedColor.equals("Vàng"))
+            vungNoiDung.setBackground(Color.YELLOW);
+        if(selectedColor.equals("Đỏ"))
+            vungNoiDung.setBackground(Color.RED);
+        if(selectedColor.equals("Xám"))
+            vungNoiDung.setBackground(Color.GRAY);
     }//GEN-LAST:event_btXacNhanActionPerformed
 
     /**
