@@ -197,13 +197,16 @@ public class TH0904Nhap extends javax.swing.JFrame {
         tam.setNamSinh(namSinh);
         tam.setGioiTinh(gioiTinh);
         sv.add(tam);
+        txtHoTen.setText("");
+        txtNamSinh.setText("");
     }//GEN-LAST:event_btThemActionPerformed
 
     private void btNapActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btNapActionPerformed
-        String outPut = "";
+        String outPut = "STT \t Họ Tên\t Năm Sinh\t Giới tính\n";
         for(int i = 1; i <= sv.size(); i++){
-            
+            String.join(outPut, "");
         }
+        txtArea.setText(outPut);
     }//GEN-LAST:event_btNapActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

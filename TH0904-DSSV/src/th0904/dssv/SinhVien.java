@@ -4,10 +4,13 @@ public class SinhVien {
    private int namSinh;
    private String gioiTinh;
 
-    SinhVien() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+   public SinhVien(){
     }
-
+   public SinhVien(String _HoTen, int _NamSinh, String _GioiTinh){
+       this.hoTen = _HoTen;
+       this.namSinh = _NamSinh;
+       this.gioiTinh = _GioiTinh;
+   }
    public String getHoTen(){
        return this.hoTen;
    }
