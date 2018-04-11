@@ -27,21 +27,66 @@ public class DemoJlist extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jScrollPane1 = new javax.swing.JScrollPane();
+        listMauNen = new javax.swing.JList<>();
+        btXacNhan = new javax.swing.JButton();
+        lbChon = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        listMauNen.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        listMauNen.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Xanh Lá", "Vàng", "Đỏ", "Xám" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane1.setViewportView(listMauNen);
+
+        btXacNhan.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        btXacNhan.setText("Xác Nhận Đổi Màu");
+        btXacNhan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btXacNhanActionPerformed(evt);
+            }
+        });
+
+        lbChon.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lbChon.setText("Chọn màu nền muốn đổi:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(lbChon, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 164, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jScrollPane1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btXacNhan, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lbChon, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btXacNhan, javax.swing.GroupLayout.DEFAULT_SIZE, 87, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                .addGap(160, 160, 160))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btXacNhanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btXacNhanActionPerformed
+        int stt = listMauNen.getSelectedIndex();
+    }//GEN-LAST:event_btXacNhanActionPerformed
 
     /**
      * @param args the command line arguments
@@ -79,5 +124,9 @@ public class DemoJlist extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btXacNhan;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel lbChon;
+    private javax.swing.JList<String> listMauNen;
     // End of variables declaration//GEN-END:variables
 }
