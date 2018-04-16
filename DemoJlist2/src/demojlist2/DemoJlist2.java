@@ -139,15 +139,15 @@ public class DemoJlist2 extends javax.swing.JFrame {
         */
         
         ArrayList<String> arrTen = new ArrayList<>();
-        int i;
+        int i = 0;
         for(i = 0; i < dsTen.getSize(); i++){
             String ten = dsTen.getElementAt(i).toString();
             arrTen.add(ten);
         }
         arrTen.add(txtTen.getText());
         //Chuyển sang kiểu mảng để đưa vào JList
-        Object[] mTen = arrTen.toArray();
-        listName.setListData((String[]) mTen); 
+        String[] mTen = arrTen.toArray(new String[0]);
+        listName.setListData(mTen); 
         
         txtTen.setText("");
     }//GEN-LAST:event_btAddActionPerformed

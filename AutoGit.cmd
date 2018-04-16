@@ -1,3 +1,4 @@
+git pull
 git add *
 echo off
 set /p cm="Type commit message: "
