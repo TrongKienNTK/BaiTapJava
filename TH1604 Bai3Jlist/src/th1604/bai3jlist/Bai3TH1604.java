@@ -58,6 +58,8 @@ public class Bai3TH1604 extends javax.swing.JFrame {
         btThem = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Thể Thao");
+        setResizable(false);
 
         lbDSMonTheThao.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         lbDSMonTheThao.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -161,7 +163,6 @@ public class Bai3TH1604 extends javax.swing.JFrame {
     private void btThemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btThemActionPerformed
         String input = JOptionPane.showInputDialog("Nhập tên môn thể thao: ");
         mTrai.addElement(input);
-
 //        ListModel dsMonTheThao = listMonTheThao.getModel();
 //
 //        ArrayList<String> arrMonTheThao = new ArrayList<>();
